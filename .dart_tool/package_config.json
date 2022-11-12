@@ -98,6 +98,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "shaped_bottom_bar",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/shaped_bottom_bar-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/src/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -152,7 +158,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-11-12T10:54:30.240793Z",
+  "generated": "2022-11-12T15:25:35.476575Z",
   "generator": "pub",
   "generatorVersion": "2.18.2"
 }
