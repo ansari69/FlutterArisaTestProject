@@ -9,11 +9,9 @@ import 'package:shaped_bottom_bar/models/shaped_item_object.dart';
 import 'package:shaped_bottom_bar/shaped_bottom_bar.dart';
 import 'package:shaped_bottom_bar/utils/arrays.dart';
 
+
 class MainScreen extends StatelessWidget {
  // const MainScreen({Key? key}) : super(key: key);
-
-  int _selectedIndex = 0; //New
-
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +20,22 @@ class MainScreen extends StatelessWidget {
       bottomNavigationBar: Obx(()
       {
         return ShapedBottomBar(
-            backgroundColor:  Colors.grey,
-            shapeColor: Colors.pink,
-            selectedIconColor: Colors.white,
+            backgroundColor:  Costanat.colorFontWhite,
+            shapeColor: Costanat.colorAppBar,
+            selectedIconColor: Costanat.colorFontWhite,
             shape: ShapeType.HEXAGONE,
+            iconsColor: Costanat.colorBottomBar,
+          animationType:  ANIMATION_TYPE.ROTATE,
 
             listItems: [
-              ShapedItemObject(iconData:  Icons.folder_special_rounded, title:  "پرونده های من"),
-              ShapedItemObject(iconData:  Icons.home_filled, title:  "خانه"),
-              ShapedItemObject(iconData:  Icons.send, title:  "ارسال نواقص"),
+              ShapedItemObject(iconData:  Icons.drive_folder_upload_sharp, title:  "ارسال نواقص"),
+              ShapedItemObject(iconData:  Icons.home, title:  "خانه"),
+
+              ShapedItemObject(iconData:  Icons.file_copy_sharp, title:  "پرونده های من"),
+
             ],
             selectedItemIndex: Get.find<MotionControllers>().index.value,
+
             onItemChanged: (index) {
               Get.find<MotionControllers>().index.value = index;
 
@@ -42,40 +45,26 @@ class MainScreen extends StatelessWidget {
 
       body: Column(
         children: [
-
-
           Expanded(child: _buildChild()),
 
-
         ],
-
-
       ) ,
 
       );
 
   }
-/*
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-  */
+
 
   Widget _buildChild() {
-    if (Get.find<MotionControllers>().index.value == 0) {
-        return MyFilesScreen();
+    if (Get.find<MotionControllers>().index.value == 2) {
+      return SendDefectsScreen();
     }
 
     if (Get.find<MotionControllers>().index.value == 1) {
-      //  return Text("aaaaaaa");
         return HomeScreen();
     }
 
-    return SendDefectsScreen();
-
-    //   return Text("bbbbbbbbbb");
+    return MyFilesScreen();
   }
 
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterarisatestproject/bindings/mybinding.dart';
+import 'package:flutterarisatestproject/controllers/motion_controllers.dart';
 import 'package:flutterarisatestproject/costanat.dart';
 import 'package:flutterarisatestproject/routes/routes.dart';
 import 'package:get/get.dart';
@@ -13,13 +14,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Get.put(MotionControllers());
+
     return GetMaterialApp(
       theme: new ThemeData(scaffoldBackgroundColor: Costanat.colorBackground),
       debugShowCheckedModeBanner: false,
       initialBinding: MyBindings(),
       initialRoute: '/mainScreen',
       getPages: Routes.pages,
-
 
     );
   }

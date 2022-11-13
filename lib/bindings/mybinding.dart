@@ -7,9 +7,6 @@ class MyBindings extends Bindings
   void dependencies() {
     // TODO: implement dependencies
     // Get.put(CounterController());
-
-  //  print('gggggggggggg');
-
-    Get.lazyPut(() => MotionControllers());
+    Get.put(() => MotionControllers());
   }
 }

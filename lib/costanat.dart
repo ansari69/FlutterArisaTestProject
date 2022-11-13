@@ -10,11 +10,10 @@ class Costanat
   static const colorItemList = Color(0xffB7B7B7);
   static const colorItemText = Color(0xff707070);
   static const colorItemTextValue = Color(0xff505050);
+  static const colorStatusFolder = Color(0xffF6F6F8);
 
+  static const colorBottomBar = Color(0xff909090);
 
-
-  static const nameTask = "تراکنش جدید";
-
-  //static const colorFont = Colors.white
+  static const TextItemFontSize = 12.0;
 
 }
